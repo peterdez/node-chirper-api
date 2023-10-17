@@ -33,6 +33,8 @@ db.mongoose
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to bezkoder application." });
   });
+
+require("./app/routes/chirp.routes")(app);
   
   // set port, listen for requests
   const PORT = process.env.PORT || 8080;
